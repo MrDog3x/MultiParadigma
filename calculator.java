@@ -10,13 +10,13 @@ public class calculator {
 
     Scanner inputReader = new Scanner(System.in);
 
-    System.out.println("please enter the first number");
+    System.out.println("First number:");
     numOne = inputReader.nextInt();
 
-    System.out.println("please enter the second number");
+    System.out.println("Second number:");
     numTwo = inputReader.nextInt();
 
-    System.out.println("Please enter operation");
+    System.out.println("Enter the operation");
     operationSign = inputReader.next();
     switch(operationSign){
         case "+":
