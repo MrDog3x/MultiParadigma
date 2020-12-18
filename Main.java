@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -28,9 +27,9 @@ public class Main
       }
 
         FileOutputStream Writer = new FileOutputStream("calculator.java");
-        OutputStreamWriter output = new OutputStreamWriter(Writer);
+        OutputStreamWriter writeInFile = new OutputStreamWriter(Writer);
         for(int i = 0; i < ListaNew.size(); i++)
-         output.write(ListaNew.get(i)+"\n");
-        output.close();
+        writeInFile.write(ListaNew.get(i)+"\n");
+        writeInFile.close();
   }
 }
