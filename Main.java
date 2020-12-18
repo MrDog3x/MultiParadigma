@@ -1,15 +1,22 @@
-public  class Main
-{
-    public static void main(String args[])  
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Main 
+{ 
+  public static void main(String[] args) throws Exception 
+  { 
+    String abc = "([a-z])([A-Z]+)";
+    String rename = "$1_$2";
+    ArrayList<String> Lista = new ArrayList<String>();
+    File file =  new File("calculator.java"); 
+    Scanner scanner = new Scanner(file); 
+  
+    while (scanner.hasNextLine())
     {
-        String abc = "([a-z])([A-Z]+)";
-        String rename = "$1_$2";
-        String multiParadigma="javaScript";
-        String[] Lista={"camelCase","snakeCase","multiParadigma"};
-        for(int i = 0; i<Lista.length;i++)
-        {
-        System.out.println(Lista[i].replaceAll(abc, rename).toLowerCase());
-        }
-        System.out.println(multiParadigma.replaceAll(abc, rename).toLowerCase());
+        String sor = scanner.nextLine();
+         Lista.add(sor);
     }
+      for(int i = 0; i < Lista.size(); i++)
+        System.out.println(Lista.get(i).replaceAll(abc, rename).toLowerCase());
+  }
 }
